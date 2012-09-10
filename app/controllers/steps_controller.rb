@@ -17,12 +17,20 @@ class StepsController < ApplicationController
         @current = @step.parent
         @step = @step.parent
       end
+      
+      
+      ajax_update_response(
+          params[:render].values, {}, 
+          {:postamble => "
+            $('.bar').width('#{@task.completedness}%') 
+          "})
     end
   end
   
   def destroy
     @step = Step.find(params[:id]).destroy
-    render :text => "$('##{dom_id(@step)}').remove();"
+    render :text => "$('##{dom_id(@step)}').remove();
+                     $('.bar').width('#{@step.task.completedness}%');"
   end
   
   def update

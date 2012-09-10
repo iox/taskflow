@@ -37,7 +37,8 @@ class Step < ActiveRecord::Base
     end
   end
   
-  after_update :calculate_completedness
+  after_save    :calculate_completedness
+  after_destroy :calculate_completedness
   def calculate_completedness
     task.update_attribute(:completedness, task.calculate_completedness)
   end
