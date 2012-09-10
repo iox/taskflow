@@ -15,7 +15,7 @@ class TasksController < ApplicationController
       end
     else
       # Handle new tasks (id 999999)
-      @task = Task.create(:description => "New task")
+      @task = Task.create(:description => "")
     end
     
     # Handle steps

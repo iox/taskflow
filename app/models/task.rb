@@ -18,7 +18,7 @@ class Task < ActiveRecord::Base
   has_many :steps
   
   def short_description
-    description.truncate(40, :separator => " ")
+    description.truncate(40, :separator => " ") if description
   end
   
   def total_steps
