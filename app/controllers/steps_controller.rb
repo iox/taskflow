@@ -7,7 +7,7 @@ class StepsController < ApplicationController
   def create
     hobo_create do
       # Level 0
-      if @step.task
+      if @step.task_id
         @task = @step.task
         @current = @task
         @step = nil
