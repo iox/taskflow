@@ -1,0 +1,72 @@
++ Reproducir exactamente el mismo diseño en taskflow2, en el show de una task
+
++ Se pueden mover entre tareas usando TAB o S. 
+
++ Es posible cambiar el paso seleccionado y el titulo con las flechas arriba y abajo
+
++ Los pasos se cargan desde la tabla steps, y se muestran completados o no
+
++ Es posible marcar un paso como completado pulsando alt+ESPACIO
+
++ Es posible crear nuevos pasos mediante Ajax situandote en la casilla, escribiendo y ENTER
+
++ Es posible eliminar un paso mediante la tecla Control + SUPRIMIR
+
++ Extraño bug al crear un nuevo paso: task id siempre es 1, y se recarga otra página!
+
++ Los cambios a los pasos se guardan automáticamente
+
++ Cuando hago clic con el ratón en un input, el selected se mueve automáticamente
+
++ Quitar el error del spinner en Firebug
+
++ Poder editar el título de la tarea como si fuera un paso más
+
++ Poder crear tareas con CTRL+n
+
++ Poder eliminar (marcar como completadas) tareas (CTRL+c)
+
++ Al entrar a la aplicación, redirigir automáticamente a la primera tarea
+
++ Debuggear y resolver la carrera de tiempos con CONTROL+ESPACIO (en produccion no pasa)
+
++ Poder moverse hacia atrás con SHIFT+TAB
+
++ Los pasos utilizan acts as tree, es decir, pueden tener subpasos
+
++ Es posible moverse al contexto de un paso utilizando la tecla alt+derecha+ajax+history.js
+
++ Es posible volver al contexto superior pulsando la tecla alt+izquierda
+
++ Al entrar en un paso, situarnos automáticamente en "new-step"
+
++ Efecto como en Github al entrar en un paso
+
++ Es posible gestionar múltiples niveles
+
++ Los pasos con subpasos se marcan con la flecha derecha en negro
+
++ Al marcar un paso como completado, todos sus subpasos también
+
+Barra de progreso de la tarea
+
+Poner en producción la primera versión
+
+
+
+Subir el código a Github
+
+Preparar dos carpetas: una para desarrollar y otra para produccion
+
+Reordenar steps con SHIFT + UP o CONTROL + UP
+
+Es posible añadir notas a los pasos
+
+Las tareas están encoladas por defecto. Se pueden desencolar pulsando D y encolar pulsando E
+
+Cuando la cola de tareas está vacía, mostrar la siguiente tarea no encolada
+
+Efecto persiana al cambiar entre tareas
+
+Decisión: ¿voy a publicar esta aplicación en Github? ¿la escribo en inglés?
+  Sí, voy a escribirla en inglés de forma que funcione aunque no uses Tracks

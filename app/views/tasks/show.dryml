@@ -1,0 +1,19 @@
+<include src="./lib*"/>
+
+<show-page title="Taskflow: #{@task.to_s}">
+  <body: replace>
+    <body class="show-page task">
+      <div class="container">
+        <do part="content">
+          <nav-bar/>
+          <title-bar/>
+          <task-list/>
+        </do>
+      </div>
+      <page-scripts/>
+    </body>
+    
+
+    
+  </body:>
+</show-page>

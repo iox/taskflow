@@ -1,0 +1,59 @@
+<def tag="title-bar">
+  <progress-bar/>
+  <task-description/>
+  <breadcrumb/>
+</def>
+
+
+<def tag="progress-bar">  
+  <div class="progress">
+    <div class="bar bar-success" style="width: #{@task.completedness}%;"
+         data-step-number="#{@task.step_number}" 
+         data-completed-step-number="#{@task.completed_step_number}"></div>
+  </div>
+</def>
+
+<def tag="task-description">
+  <div part="task-editor" class="selectable">
+    <live-editor-innards field="description" with="&@task" style="display:inline;">
+      <input: class="clean h3" autocomplete="off"/>
+    </live-editor-innards>
+  </div>
+</def>
+
+<def tag="breadcrumb">
+  <ul class="breadcrumb">
+    <li>
+      <a class="level-up-link" to="&@task"
+         update="content" push-state
+         before="hide_slide('right')"
+         success="show_slide('left')" >Inicio
+      </a>
+    </li>
+    <relationship if="&@step"/>
+  </ul>
+</def>
+
+
+<def tag="relationship">
+  <repeat with="&@step.ancestors.reverse">
+    <li> <span class="divider">></span>
+      <a href="/tasks/#{@task.id}/?step=#{this.id}" class="level-up-link"
+        new-title="Taskflow: #{@task.to_s}"
+        update="content" push-state
+        before="hide_slide('right')"
+        success="show_slide('left')">
+        <this/>
+      </a>
+    </li>
+  </repeat>
+  <li class="active"> <span class="divider">></span><%= @step.to_s %></li>
+</def>
+
+
+
+
+
+
+
+

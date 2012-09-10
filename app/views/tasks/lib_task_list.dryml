@@ -1,0 +1,55 @@
+<def tag="task-list">
+
+   <ul class="task-list">
+   
+     <repeat with="&@current.steps">
+       <step/>
+     </repeat>
+   
+     <new-step/>
+   </ul>
+
+</def>
+
+
+<def tag="step">
+  <% selected = "selected" if this == @current.steps.first %>
+  <li class="#{selected} selectable" id="#{dom_id(this)}">
+    <editor field="completed"/>
+    <div part="step-editor">
+      <% checked = "checked" if this.completed %>
+      <live-editor-innards field="name" style="display:inline;">
+        <input: class="clean text-input #{checked}" autocomplete="off"/>
+      </live-editor-innards>
+      <step-icons/>
+    </div>
+  </li>
+</def>
+
+<def tag="step-icons">
+  <%= link_to '<i class=\'icon-trash icon-white\'></i>'.html_safe, 
+      this, method: :delete, :remote => true, :class => "delete-link" %>
+  <a href="#"><i class=" icon-resize-vertical icon-white"></i></a>
+  <a href="/tasks/#{@task.id}/?step=#{this.id}" update="content" push-state 
+     new-title="Taskflow: #{@task.to_s}" class="level-down-link"
+     before="hide_slide('left')"
+     success="show_slide('right')">
+    <% icon="icon-white" if this.children.empty? %>
+    <i class=" icon-chevron-right #{icon}"></i>
+  </a>
+</def>
+
+
+<def tag="new-step">
+  <% 
+    selected ="selected" if @current.steps.size == 0 
+    new_step = Step.new(:task_id => @task.id)
+    new_step = Step.new(:parent_id => @step.id) if @step
+  %>
+  <li class="new-step #{selected} selectable">
+    <form class="" with="&new_step" ajax 
+          success="new_step_success()">  
+      <input autocomplete="off" class="clean text-input" type="text" name="step[name]" placeholder="Añadir paso"/>
+    </form>
+  </li>
+</def>

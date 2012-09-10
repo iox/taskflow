@@ -1,0 +1,55 @@
+<def tag="nav-bar">
+  <div class="navbar  navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">Taskflow</a>
+        <div class="nav-collapse collapse">
+          <task-menu/>
+          <options-menu/>
+        </div>
+      </div>
+    </div>
+  </div>
+</def>
+
+<def tag="task-menu">
+  <ul class="nav">
+    <repeat with="&Task.where(:state => 'active').all">
+      <task/>
+    </repeat>
+  </ul>
+</def>
+
+
+<def tag="task">
+  <% active_status = "inactive"
+     active_status = "active" if (@task == this) %>
+  <li class="#{active_status}">
+    <a ajax push-state new-title="Taskflow: #{this.to_s}" 
+       success="focus_selected()">
+      <this.short-description/>
+    </a>
+  </li>
+</def>
+
+
+<def tag="options-menu">
+  <div id="pasos-pendientes" class="pull-right">
+    <a id="send-tracks-link" title="Send pending steps to Tracks" href="#">
+      <span class="badge">2</span>
+    </a>
+    <a id="refresh-tracks-link" title="Refresh tasks from Tracks" href="#">
+      <span class=""><i class="icon-refresh"></i></span>
+    </a>
+    <a id="new-link" title="Create new task" href="/tasks/999999" 
+       ajax push-state new-title="Taskflow: New task"
+       success="new_task_success()">
+      <span class=""><i class="icon-plus"></i></span>
+    </a>
+    <a id="complete-link" title="Mark this task as completed" href="/tasks/#{@task.id}?completed=true"
+       ajax push-state new-title="Taskflow"
+       success="focus_selected()">
+      <span class=""><i class="icon-ok"></i></span>
+    </a>
+  </div>
+</def>

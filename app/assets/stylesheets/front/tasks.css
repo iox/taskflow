@@ -1,0 +1,88 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-image: url('/assets/fondo.jpg');
+}
+
+.checkbox {
+  font-size:1.3em;
+  padding-bottom:20px;
+}
+input.clean{
+  background-color:transparent;
+  border:0;
+  border-radius:0;
+  border-color:transparent;
+  box-shadow:none;
+  color:#333;
+  width:90%;
+}
+input.h3{
+  font-size:1.7em;
+  padding:10px 0;
+  font-weight:bold;
+  width:100%;
+  height: 1em;
+}
+.breadcrumb li.active{
+  color:black;
+}
+.task-list li{
+  list-style:none;
+  display:block;
+  padding-left:10px;
+  border: 1px solid transparent;
+}
+.task-list{
+  margin:0;
+}
+.task-list li input[type="text"]{
+  margin-top:13px;
+  font-size:1.3em;
+  padding-left:2px;
+}
+.task-list li input[type="text"]:focus{
+  border:0;
+  box-shadow:none;
+}
+.task-list li .checked{
+  color:#4CA34C; /*green*/
+  font-style: italic;
+}
+.task-list li.new-step{
+  opacity:0.5;
+}
+.task-list li.new-step .text-input{
+  padding-left:16px;
+  padding-top:8px;
+}
+.task-list li.selected{
+  border: 1px solid rgba(120,120,120,0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius:5px;
+  background-color: rgba(255,255,255,0.2);
+}
+.task-list i{
+  margin-top:5px;
+}
+.task-list textarea{
+  width:80%;
+  margin-left:22px;
+  height:150px;
+  background-color: rgba(255,255,255,0.5);
+}
+.progress{
+  height:3px;
+  opacity:0.7;
+}
+#pasos-pendientes{
+  opacity:0.5;
+  margin-top:8px;
+}
+#pasos-pendientes .icon-refresh{
+  margin-top:3px;
+}
+input.step-completed{
+  float: left;
+  margin-top: 19px;
+}
