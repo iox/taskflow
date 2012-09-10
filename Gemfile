@@ -55,3 +55,4 @@ gem "hobo_bootstrap", :git => "git://github.com/suyccom/hobo_bootstrap.git"
 gem 'will_paginate-bootstrap'
 gem "jquery-historyjs"
 gem "acts_as_tree"
+gem "acts_as_list"

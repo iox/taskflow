@@ -48,17 +48,21 @@
 
 + Al marcar un paso como completado, todos sus subpasos también
 
-Barra de progreso de la tarea
++ Barra de progreso de la tarea
 
-Poner en producción la primera versión
++ Poner en producción la primera versión
 
++ Subir el código a Github
 
++ Preparar dos carpetas: una para desarrollar y otra para produccion
 
-Subir el código a Github
++ Reordenar steps con SHIFT + UP o CONTROL + UP
 
-Preparar dos carpetas: una para desarrollar y otra para produccion
-
-Reordenar steps con SHIFT + UP o CONTROL + UP
+Pequeños bugs
+  Al volver a la izquierda, marcar como seleccionada la correcta
+  Cambiar CONTROL+C para completadas a CONTROL+f (evitar conflicto con copiar)
+  Cuando pulsamos CONTROL+DCHA, guardar primero los cambios del paso actual
+  Cuando pulsamos TAB, guardar primero los cambios del nombre de la tarea
 
 Es posible añadir notas a los pasos
 
@@ -66,7 +70,7 @@ Las tareas están encoladas por defecto. Se pueden desencolar pulsando D y encol
 
 Cuando la cola de tareas está vacía, mostrar la siguiente tarea no encolada
 
+Rediseñar las peticiones a Rails para usar diversas acciones y no solo el show de task para todo
+
 Efecto persiana al cambiar entre tareas
 
-Decisión: ¿voy a publicar esta aplicación en Github? ¿la escribo en inglés?
-  Sí, voy a escribirla en inglés de forma que funcione aunque no uses Tracks

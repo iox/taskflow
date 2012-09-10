@@ -4,7 +4,7 @@ class Step < ActiveRecord::Base
 
   fields do
     name :string, :required
-    order :integer, :default => 0
+    position :integer, :default => 0
     completed :boolean, :default => false
     timestamps
   end
@@ -12,7 +12,9 @@ class Step < ActiveRecord::Base
   belongs_to :task
   
   include ActsAsTree
-  acts_as_tree order: "'order asc'"
+  acts_as_tree order: "position asc"
+  set_default_order "position asc"
+  acts_as_list :scope => '(task_id = \'#{task_id}\' OR parent_id = \'#{parent_id}\')'
   
   def steps
     children

@@ -4,6 +4,8 @@ Taskflow2::Application.routes.draw do
   root :to => 'front#index'
 
   match 'search' => 'front#search', :as => 'site_search'
+  
+  match 'steps/move/:id/:direction' => 'steps#move'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

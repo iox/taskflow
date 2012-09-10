@@ -1,6 +1,6 @@
 <def tag="task-list">
 
-   <ul class="task-list">
+   <ul class="task-list" id="task-list">
    
      <repeat with="&@current.steps">
        <step/>
@@ -30,6 +30,17 @@
   <%= link_to '<i class=\'icon-trash icon-white\'></i>'.html_safe, 
       this, method: :delete, :remote => true, :class => "delete-link" %>
   <a href="#"><i class=" icon-resize-vertical icon-white"></i></a>
+  
+  <a href="/steps/move/#{this.id}/up" update="content" push-state 
+     new-title="Taskflow: #{@task.to_s}" class="order-up-link">
+    <i class="icon-chevron-up icon-white"></i>
+  </a>
+  
+  <a href="/steps/move/#{this.id}/down" update="content" push-state 
+     new-title="Taskflow: #{@task.to_s}" class="order-down-link">
+    <i class="icon-chevron-down icon-white"></i>
+  </a>  
+  
   <a href="/tasks/#{@task.id}/?step=#{this.id}" update="content" push-state 
      new-title="Taskflow: #{@task.to_s}" class="level-down-link"
      before="hide_slide('left')"

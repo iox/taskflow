@@ -1,0 +1,8 @@
+<include src="tasks/lib*"/>
+
+<repeat with="&@current.steps">
+  <step/>
+</repeat>
+
+
+<new-step/>

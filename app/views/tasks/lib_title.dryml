@@ -27,7 +27,7 @@
       <a class="level-up-link" to="&@task"
          update="content" push-state
          before="hide_slide('right')"
-         success="show_slide('left')" >Inicio
+         success="show_slide('left'); select_step(#{@step.id if @step})" >Inicio
       </a>
     </li>
     <relationship if="&@step"/>

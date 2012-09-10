@@ -1,13 +1,17 @@
 $ ->
   # Handle keyboard events
   $(document).keypress (e) ->
-    console.log "keyCode: #{e.keyCode}"
-    console.log "charCode: #{e.charCode}"
+    #console.log "keyCode: #{e.keyCode}"
+    #console.log "charCode: #{e.charCode}"
 
     if (e.keyCode == 9 && e.shiftKey) # SHIFT + TAB key
       jump_task(e, true)
     else if (e.keyCode == 9) # TAB key
       jump_task(e, false)
+    else if (e.keyCode == 40 && e.shiftKey) # SHIFT + Down arrow
+      move_down(e)
+    else if (e.keyCode == 38 && e.shiftKey) # SHIFT + Up arrow
+      move_up(e)
     else if (e.keyCode == 40) # Down arrow
       step_down(e)
     else if (e.keyCode == 38) # Up arrow
@@ -18,7 +22,7 @@ $ ->
       remove_step(e)
     else if (e.charCode == 110 && e.ctrlKey) # CONTROL + "n"
       new_task(e)
-    else if (e.charCode == 99 && e.ctrlKey) # CONTROL + "c"
+    else if (e.charCode == 102 && e.ctrlKey) # CONTROL + "f"
       complete_task(e)
     else if (e.keyCode == 37 && e.ctrlKey) # CONTROL + Left arrow
       level_up(e)
@@ -90,10 +94,12 @@ remove_step = (e) ->
     next_step.find("input[type='text']").focus()
 
 new_task = (e) ->
+  $(".selected input[type='text']").trigger('change')
   e.preventDefault()
   $('#new-link').click()
 
 complete_task = (e) ->
+  $(".selected input[type='text']").trigger('change')
   e.preventDefault()
   $('#complete-link').click()
   
@@ -106,3 +112,13 @@ level_up = (e) ->
   step = $('.level-up-link').last()
   if step
     step.click()
+
+move_up = (e) ->
+  step = $('.task-list li.selected').not('.new-step')
+  if step
+    step.find('.order-up-link').click()
+
+move_down = (e) ->
+  step = $('.task-list li.selected').not('.new-step')
+  if step
+    step.find('.order-down-link').click()

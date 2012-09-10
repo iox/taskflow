@@ -22,7 +22,7 @@ class TasksController < ApplicationController
     @step = Step.find(params[:step]) if params[:step]
     @current = @task
     @current = @step if @step
-    
+
     hobo_show
   end
 

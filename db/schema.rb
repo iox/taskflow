@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909145318) do
+ActiveRecord::Schema.define(:version => 20120910123622) do
 
   create_table "steps", :force => true do |t|
     t.string   "name"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20120909145318) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "task_id"
-    t.integer  "order",      :default => 0
     t.integer  "parent_id"
+    t.integer  "position"
   end
 
   add_index "steps", ["parent_id"], :name => "index_steps_on_parent_id"

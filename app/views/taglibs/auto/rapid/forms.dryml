@@ -3,7 +3,7 @@
 <def tag="form" for="Step">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="name, order, completed, parent, task" param/>
+    <field-list fields="name, position, completed, parent, task" param/>
     <div param="actions">
       <submit label="#{ht 'step.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

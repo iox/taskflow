@@ -46,4 +46,7 @@ Taskflow2::Application.routes.draw do
   put 'steps/:id(.:format)' => 'steps#update', :as => 'update_step', :constraints => { :id => %r([^/.?]+) }
   delete 'steps/:id(.:format)' => 'steps#destroy', :as => 'destroy_step', :constraints => { :id => %r([^/.?]+) }
 
+  # Reorder routes for controller "steps"
+  post 'steps/reorder(.:format)', :as => 'reorder_steps'
+
 end

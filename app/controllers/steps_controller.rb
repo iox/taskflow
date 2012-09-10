@@ -17,8 +17,6 @@ class StepsController < ApplicationController
         @current = @step.parent
         @step = @step.parent
       end
-      
-      
       ajax_update_response(
           params[:render].values, {}, 
           {:postamble => "
@@ -37,6 +35,19 @@ class StepsController < ApplicationController
     hobo_update do
       render :text => "$('.bar').width('#{@step.task.completedness}%')"
     end
+  end
+  
+  def move
+    @step = Step.find(params[:id])
+    if params[:direction] == 'up'
+      @step.move_higher
+    elsif params[:direction] == 'down'
+      @step.move_lower
+    end
+    logger.info '>>> Moving finished'
+    @task = @step.task
+    @current = @step.parent
+    @current = @task if @step.task_id
   end
 
 end

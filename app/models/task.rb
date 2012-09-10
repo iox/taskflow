@@ -15,7 +15,8 @@ class Task < ActiveRecord::Base
     timestamps
   end
   
-  has_many :steps
+  has_many :steps, :order => "position asc"
+
   
   def short_description
     description.truncate(40, :separator => " ") if description
