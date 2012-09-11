@@ -58,11 +58,13 @@
 
 + Reordenar steps con SHIFT + UP o CONTROL + UP
 
-Pequeños bugs
++ Pequeños bugs
   Al volver a la izquierda, marcar como seleccionada la correcta
   Cambiar CONTROL+C para completadas a CONTROL+f (evitar conflicto con copiar)
   Cuando pulsamos CONTROL+DCHA, guardar primero los cambios del paso actual
   Cuando pulsamos TAB, guardar primero los cambios del nombre de la tarea
+
+Después de reordenar, focus al adecuado
 
 Es posible añadir notas a los pasos
 
