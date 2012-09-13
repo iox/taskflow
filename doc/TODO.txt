@@ -64,7 +64,21 @@
   Cuando pulsamos CONTROL+DCHA, guardar primero los cambios del paso actual
   Cuando pulsamos TAB, guardar primero los cambios del nombre de la tarea
 
-Después de reordenar, focus al adecuado
++ Después de reordenar, focus al adecuado
+
+Necesito poder guardar una tarea para continuar una semana después, especialmente importante con las tareas enormes
+  Lo ideal es transformar la tarea en un formato legible y guardarlo en las notas del tracks
+  Después lo puedo volver a importar y listo
+  
+el ultimo paso no es eliminable
+
+No puedo añadir dos tareas seguidas
+
+Si tengo más de 4/5 tareas, dejo de poder editar el título
+
+Es posible insertar un paso dentro de otro pulsando "SHIFT+IZQ"
+
+Es posible sacar un paso al nivel superior pulsando "SHIFT+DCHA"
 
 Es posible añadir notas a los pasos
 

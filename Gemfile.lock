@@ -6,47 +6,47 @@ GIT
 
 GIT
   remote: git://github.com/suyccom/hobo_bootstrap.git
-  revision: 2405601ca244fe6621a0e639ce801bacc71df232
+  revision: 771b4f76d64114cf87eb955193fad54f3cf41825
   specs:
-    hobo_bootstrap (1.4.0.pre9)
-      hobo (~> 1.4.0.pre9)
+    hobo_bootstrap (2.0.0.pre1)
+      hobo (~> 2.0.0.pre1)
       will_paginate-bootstrap (~> 0.2.1)
 
 PATH
   remote: /home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo
   specs:
-    dryml (1.4.0.pre9)
+    dryml (2.0.0.pre1)
       actionpack (~> 3.2.0)
-      hobo_support (= 1.4.0.pre9)
-    hobo (1.4.0.pre9)
-      dryml (= 1.4.0.pre9)
-      hobo_fields (= 1.4.0.pre9)
-      hobo_support (= 1.4.0.pre9)
+      hobo_support (= 2.0.0.pre1)
+    hobo (2.0.0.pre1)
+      dryml (= 2.0.0.pre1)
+      hobo_fields (= 2.0.0.pre1)
+      hobo_support (= 2.0.0.pre1)
       will_paginate (~> 3.0.0)
-    hobo_clean (1.4.0.pre9)
-      hobo (= 1.4.0.pre9)
-    hobo_clean_admin (1.4.0.pre9)
+    hobo_clean (2.0.0.pre1)
+      hobo (= 2.0.0.pre1)
+    hobo_clean_admin (2.0.0.pre1)
       rails (~> 3.2.0)
-    hobo_jquery (1.4.0.pre9)
-      hobo (= 1.4.0.pre9)
+    hobo_jquery (2.0.0.pre1)
+      hobo (= 2.0.0.pre1)
       jquery-rails (~> 2.0)
-    hobo_jquery_ui (1.4.0.pre9)
-      hobo (= 1.4.0.pre9)
-      hobo_jquery (= 1.4.0.pre9)
+    hobo_jquery_ui (2.0.0.pre1)
+      hobo (= 2.0.0.pre1)
+      hobo_jquery (= 2.0.0.pre1)
       jquery-ui-themes (~> 0.0.4)
-    hobo_rapid (1.4.0.pre9)
-      hobo (= 1.4.0.pre9)
+    hobo_rapid (2.0.0.pre1)
+      hobo (= 2.0.0.pre1)
 
 PATH
   remote: /home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo/hobo_fields
   specs:
-    hobo_fields (1.4.0.pre9)
-      hobo_support (= 1.4.0.pre9)
+    hobo_fields (2.0.0.pre1)
+      hobo_support (= 2.0.0.pre1)
 
 PATH
   remote: /home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo/hobo_support
   specs:
-    hobo_support (1.4.0.pre9)
+    hobo_support (2.0.0.pre1)
       rails (~> 3.2.0)
 
 GEM
@@ -83,7 +83,7 @@ GEM
     acts_as_tree (1.1.0)
       activerecord (>= 3.0.0)
     arel (3.0.2)
-    builder (3.0.2)
+    builder (3.0.3)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
