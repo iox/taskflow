@@ -19,7 +19,7 @@ class TasksController < ApplicationController
     end
     
     # Handle saved steps
-    if params[:clear_saved_step]
+    if params[:clear_saved_step] || params[:step]
       @task.update_attribute(:saved_step, 0)
     end
     if @task.saved_step > 0
