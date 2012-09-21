@@ -18,10 +18,21 @@ class TasksController < ApplicationController
       @task = Task.create(:description => "")
     end
     
+    # Handle saved steps
+    if params[:clear_saved_step]
+      @task.update_attribute(:saved_step, 0)
+    end
+    if @task.saved_step > 0
+      params[:step] = @task.saved_step
+    end
+    
     # Handle steps
-    @step = Step.find(params[:step]) if params[:step]
     @current = @task
-    @current = @step if @step
+    if params[:step]
+      @step = Step.find(params[:step])
+      @task.update_attribute(:saved_step, @step.id)
+      @current = @step
+    end
 
     hobo_show
   end

@@ -16,7 +16,7 @@
 <def tag="form" for="Task">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="description, notes, due_at, order, line_order, state, completedness, line" param/>
+    <field-list fields="description, notes, due_at, order, line_order, state, completedness, line, saved_step" param/>
     <div param="actions">
       <submit label="#{ht 'task.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

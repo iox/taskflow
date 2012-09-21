@@ -220,7 +220,7 @@
 
           <section param="content-body">
             <view:description param="description" />
-            <field-list fields="notes, due_at, order, line_order, state, completedness" param/>
+            <field-list fields="notes, due_at, order, line_order, state, completedness, saved_step" param/>
           </section>
     </content:>
 

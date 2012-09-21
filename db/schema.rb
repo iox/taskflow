@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910123622) do
+ActiveRecord::Schema.define(:version => 20120921061054) do
 
   create_table "steps", :force => true do |t|
     t.string   "name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20120910123622) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "completedness", :default => 0
+    t.integer  "saved_step",    :default => 0
   end
 
   create_table "users", :force => true do |t|

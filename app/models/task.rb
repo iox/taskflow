@@ -12,6 +12,7 @@ class Task < ActiveRecord::Base
     state       enum_string(:active, :completed), :default => 'active'
     completedness :integer, :default => 0
     line        :boolean, :default => false
+    saved_step  :integer, :default => 0
     timestamps
   end
   

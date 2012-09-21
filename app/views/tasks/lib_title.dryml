@@ -24,7 +24,7 @@
 <def tag="breadcrumb">
   <ul class="breadcrumb">
     <li>
-      <a class="level-up-link" to="&@task"
+      <a class="level-up-link" href="/tasks/#{@task.id}?clear_saved_step=true"
          update="content" push-state
          before="hide_slide('right')"
          success="show_slide('left'); select_step(#{@step.id if @step})" >Inicio
