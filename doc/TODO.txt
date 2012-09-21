@@ -66,13 +66,17 @@
 
 + Después de reordenar, focus al adecuado
 
+Después de reordenar, no puedo crear nuevos pasos
+
+Al utilizar TAB o CONTROL+N, me gustaría volver al paso que estaba seleccionado antes, esto es muy importante
+
+Cuando termino todas las tareas, poner la aplicación en una nueva tarea automáticamente
+
 Necesito poder guardar una tarea para continuar una semana después, especialmente importante con las tareas enormes
   Lo ideal es transformar la tarea en un formato legible y guardarlo en las notas del tracks
   Después lo puedo volver a importar y listo
   
 el ultimo paso no es eliminable
-
-No puedo añadir dos tareas seguidas
 
 Si tengo más de 4/5 tareas, dejo de poder editar el título
 

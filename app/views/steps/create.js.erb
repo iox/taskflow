@@ -1,5 +1,6 @@
 hjq.ajax.update("task-list", "<%=escape_javascript(raw(render :template => '/steps/list'))%>")
 History.pushState(null, "Taskflow: <%= @task.to_s %>", "/tasks/<%= @task.id %>");
 $('.selected').removeClass('selected');
-$("#<%= dom_id(@moved) %>").addClass('selected');
+$(".new-step").addClass('selected');
 focus_selected();
+$('.bar').width('#{@task.completedness}%') 

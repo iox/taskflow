@@ -58,7 +58,7 @@
     new_step = Step.new(:parent_id => @step.id) if @step
   %>
   <li class="new-step #{selected} selectable">
-    <form class="" with="&new_step" ajax 
+    <form class="" with="&new_step" update="content" 
           success="new_step_success()">  
       <input autocomplete="off" class="clean text-input" type="text" name="step[name]" placeholder="Añadir paso"/>
     </form>
