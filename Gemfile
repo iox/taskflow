@@ -37,18 +37,18 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "hobo_support", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo/hobo_support"
-gem "hobo_fields", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo/hobo_fields"
-gem "dryml", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
-gem "hobo", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
-gem "hobo_rapid", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
-gem "hobo_clean", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
-gem "hobo_clean_admin", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
-gem "hobo_jquery", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
-gem "hobo_jquery_ui", :path => "/home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo"
+gem "hobo_support", "2.0.0.pre4"
+gem "hobo_fields", "2.0.0.pre4"
+gem "dryml", "2.0.0.pre4"
+gem "hobo", "2.0.0.pre4"
+gem "hobo_rapid", "2.0.0.pre4"
+gem "hobo_clean", "2.0.0.pre4"
+gem "hobo_clean_admin", "2.0.0.pre4"
+gem "hobo_jquery", "2.0.0.pre4"
+gem "hobo_jquery_ui", "2.0.0.pre4"
 gem "rspec-rails", ">= 2.5.0", :group => [:test, :development]
 gem "jquery-ui-themes", "~> 0.0.4"
-gem "will_paginate", :git => "git://github.com/bryanlarsen/will_paginate"
+gem "will_paginate", :git => "git://github.com/Hobo/will_paginate"
 
 
 gem "hobo_bootstrap", :git => "git://github.com/suyccom/hobo_bootstrap.git"

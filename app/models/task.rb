@@ -16,6 +16,8 @@ class Task < ActiveRecord::Base
     timestamps
   end
   
+  #attr_accessible :id, :tracks_id, :description, :notes, :due_at, :order, :state, :completedness, :line
+  
   has_many :steps, :order => "position asc"
 
   

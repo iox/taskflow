@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/bryanlarsen/will_paginate
-  revision: 3096f88403096f7207c4c3ede0a8bb7c344bb78a
+  remote: git://github.com/Hobo/will_paginate
+  revision: 2695031cf4d55a6816ff36941605125418ceb8cb
   specs:
     will_paginate (3.0.3)
 
@@ -11,43 +11,6 @@ GIT
     hobo_bootstrap (2.0.0.pre1)
       hobo (~> 2.0.0.pre1)
       will_paginate-bootstrap (~> 0.2.1)
-
-PATH
-  remote: /home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo
-  specs:
-    dryml (2.0.0.pre1)
-      actionpack (~> 3.2.0)
-      hobo_support (= 2.0.0.pre1)
-    hobo (2.0.0.pre1)
-      dryml (= 2.0.0.pre1)
-      hobo_fields (= 2.0.0.pre1)
-      hobo_support (= 2.0.0.pre1)
-      will_paginate (~> 3.0.0)
-    hobo_clean (2.0.0.pre1)
-      hobo (= 2.0.0.pre1)
-    hobo_clean_admin (2.0.0.pre1)
-      rails (~> 3.2.0)
-    hobo_jquery (2.0.0.pre1)
-      hobo (= 2.0.0.pre1)
-      jquery-rails (~> 2.0)
-    hobo_jquery_ui (2.0.0.pre1)
-      hobo (= 2.0.0.pre1)
-      hobo_jquery (= 2.0.0.pre1)
-      jquery-ui-themes (~> 0.0.4)
-    hobo_rapid (2.0.0.pre1)
-      hobo (= 2.0.0.pre1)
-
-PATH
-  remote: /home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo/hobo_fields
-  specs:
-    hobo_fields (2.0.0.pre1)
-      hobo_support (= 2.0.0.pre1)
-
-PATH
-  remote: /home/ignacio/Trabajos/2_Proyectillos/Hobo/hobo/hobo_support
-  specs:
-    hobo_support (2.0.0.pre1)
-      rails (~> 3.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -92,10 +55,36 @@ GEM
       execjs
     coffee-script-source (1.3.3)
     diff-lcs (1.1.3)
+    dryml (2.0.0.pre4)
+      actionpack (~> 3.2.0)
+      hobo_support (= 2.0.0.pre4)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.1)
+    hobo (2.0.0.pre4)
+      dryml (= 2.0.0.pre4)
+      hobo_fields (= 2.0.0.pre4)
+      hobo_support (= 2.0.0.pre4)
+      will_paginate (~> 3.0.0)
+    hobo_clean (2.0.0.pre4)
+      hobo (= 2.0.0.pre4)
+      hobo_jquery_ui (= 2.0.0.pre4)
+    hobo_clean_admin (2.0.0.pre4)
+      hobo_clean (= 2.0.0.pre4)
+    hobo_fields (2.0.0.pre4)
+      hobo_support (= 2.0.0.pre4)
+    hobo_jquery (2.0.0.pre4)
+      hobo_rapid (= 2.0.0.pre4)
+      jquery-rails (~> 2.0)
+    hobo_jquery_ui (2.0.0.pre4)
+      hobo (= 2.0.0.pre4)
+      hobo_jquery (= 2.0.0.pre4)
+      jquery-ui-themes (~> 0.0.4)
+    hobo_rapid (2.0.0.pre4)
+      hobo (= 2.0.0.pre4)
+    hobo_support (2.0.0.pre4)
+      rails (~> 3.2.0)
     httparty (0.8.3)
       multi_json (~> 1.0)
       multi_xml
@@ -185,16 +174,16 @@ DEPENDENCIES
   acts_as_list
   acts_as_tree
   coffee-rails (~> 3.2.1)
-  dryml!
-  hobo!
+  dryml (= 2.0.0.pre4)
+  hobo (= 2.0.0.pre4)
   hobo_bootstrap!
-  hobo_clean!
-  hobo_clean_admin!
-  hobo_fields!
-  hobo_jquery!
-  hobo_jquery_ui!
-  hobo_rapid!
-  hobo_support!
+  hobo_clean (= 2.0.0.pre4)
+  hobo_clean_admin (= 2.0.0.pre4)
+  hobo_fields (= 2.0.0.pre4)
+  hobo_jquery (= 2.0.0.pre4)
+  hobo_jquery_ui (= 2.0.0.pre4)
+  hobo_rapid (= 2.0.0.pre4)
+  hobo_support (= 2.0.0.pre4)
   jquery-historyjs
   jquery-rails
   jquery-ui-themes (~> 0.0.4)
