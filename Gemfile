@@ -56,3 +56,13 @@ gem 'will_paginate-bootstrap'
 gem "jquery-historyjs"
 gem "acts_as_tree"
 gem "acts_as_list"
+
+
+# Testing gems
+group :test do
+  gem "rspec-rails", ">= 2.5.0"
+  gem "autotest"
+  gem "autotest-growl"
+  gem "capybara"
+  gem "capybara-webkit", "0.12.1"
+end

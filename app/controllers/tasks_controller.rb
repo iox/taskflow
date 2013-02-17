@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   auto_actions :all
   
   def show
-    if Task.where(:id => params[:id]).count > 0
+    if params[:id] && Task.where(:id => params[:id]).count > 0
       @task = Task.find(params[:id])
       
       # Complete a task
@@ -16,7 +16,7 @@ class TasksController < ApplicationController
     else
       # Handle new tasks (id 999999)
       @task = Task.create(:description => "")
-    end
+    end  
     
     # Handle saved steps
     if params[:clear_saved_step] || params[:step]
