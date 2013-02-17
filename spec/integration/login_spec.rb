@@ -9,7 +9,7 @@ feature 'The visitor wants to log in and', :driver => :selenium do
     fill_in 'login', :with => 'tecnicos@unoycero.com'
     fill_in 'password', :with => 'RobotRobot'
     click_button 'Iniciar Sesión'
-    page.should have_content 'Taskflow'
+    page.should have_content 'Taskflow222'
   end
   
 end
