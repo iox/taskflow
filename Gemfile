@@ -66,3 +66,4 @@ group :test do
   gem "capybara"
   gem "capybara-webkit", "0.12.1"
 end
+

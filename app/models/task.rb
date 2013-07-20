@@ -19,6 +19,8 @@ class Task < ActiveRecord::Base
   #attr_accessible :id, :tracks_id, :description, :notes, :due_at, :order, :state, :completedness, :line
   
   has_many :steps, :order => "position asc"
+  has_many :pomodoro_tasks
+  has_many :pomodoros, :through => :pomodoro_tasks
 
   
   def short_description

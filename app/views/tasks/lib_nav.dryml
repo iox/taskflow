@@ -2,7 +2,7 @@
   <div class="navbar  navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="#">Taskflow</a>
+        <a class="brand" href="/">Taskflow</a>
         <div class="nav-collapse collapse">
           <task-menu/>
           <options-menu/>
@@ -35,12 +35,6 @@
 
 <def tag="options-menu">
   <div id="pasos-pendientes" class="">
-    <a id="send-tracks-link" title="Send pending steps to Tracks" href="#">
-      <span class="badge">2</span>
-    </a>
-    <a id="refresh-tracks-link" title="Refresh tasks from Tracks" href="#">
-      <span class=""><i class="icon-refresh"></i></span>
-    </a>
     <a id="new-link" title="Create new task" href="/tasks/999999" 
        ajax push-state new-title="Taskflow: New task"
        success="new_task_success()">
@@ -51,5 +45,8 @@
        success="focus_selected()">
       <span class=""><i class="icon-ok"></i></span>
     </a>
+  </div>
+  <div class="pull-right" id="info-pomodoro">
+   <a class="btn" href="/pomodoros">Pomodoro: <%= @minutos_pomodoro %>'</a>
   </div>
 </def>

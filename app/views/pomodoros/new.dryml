@@ -1,0 +1,10 @@
+<new-page>
+  <heading:>
+    Empezar Pomodoro (o descansa 5 minutos)
+  </heading:>
+  
+  <form:>
+    <submit: class="btn-large"/>
+    <cancel: replace/>
+  </form:>
+</new-page>

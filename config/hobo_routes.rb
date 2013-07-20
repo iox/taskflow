@@ -9,6 +9,10 @@ Taskflow2::Application.routes.draw do
   resources :tasks
 
 
+  # Resource routes for controller pomodoros
+  resources :pomodoros
+
+
   # Resource routes for controller users
   resources :users, :only => [:edit, :show, :create, :update, :destroy] do
     collection do
@@ -53,6 +57,16 @@ Taskflow2::Application.routes.draw do
   post 'tasks(.:format)' => 'tasks#create', :as => 'create_task'
   put 'tasks/:id(.:format)' => 'tasks#update', :as => 'update_task', :constraints => { :id => %r([^/.?]+) }
   delete 'tasks/:id(.:format)' => 'tasks#destroy', :as => 'destroy_task', :constraints => { :id => %r([^/.?]+) }
+
+
+  # DEPRECATED Resource routes for controller pomodoros
+  get 'pomodoros(.:format)' => 'pomodoros#index', :as => 'pomodoros'
+  get 'pomodoros/new(.:format)' => 'pomodoros#new', :as => 'new_pomodoro'
+  get 'pomodoros/:id/edit(.:format)' => 'pomodoros#edit', :as => 'edit_pomodoro'
+  get 'pomodoros/:id(.:format)' => 'pomodoros#show', :as => 'pomodoro', :constraints => { :id => %r([^/.?]+) }
+  post 'pomodoros(.:format)' => 'pomodoros#create', :as => 'create_pomodoro'
+  put 'pomodoros/:id(.:format)' => 'pomodoros#update', :as => 'update_pomodoro', :constraints => { :id => %r([^/.?]+) }
+  delete 'pomodoros/:id(.:format)' => 'pomodoros#destroy', :as => 'destroy_pomodoro', :constraints => { :id => %r([^/.?]+) }
 
 
   # DEPRECATED Lifecycle routes for controller users

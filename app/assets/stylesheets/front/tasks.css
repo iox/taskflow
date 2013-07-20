@@ -76,8 +76,8 @@ input.h3{
   opacity:0.7;
 }
 #pasos-pendientes{
-  opacity:0.5;
-  margin-top:8px;
+  opacity:0.021;
+  margin-top:0px;
 }
 #pasos-pendientes .icon-refresh{
   margin-top:3px;
@@ -92,3 +92,6 @@ input.step-completed{
 .navbar .nav {
   float: none !important;
 }
+
+
+

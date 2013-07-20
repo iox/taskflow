@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120921061054) do
+ActiveRecord::Schema.define(:version => 20130720131127) do
+
+  create_table "pomodoro_tasks", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "task_id"
+    t.integer  "pomodoro_id"
+  end
+
+  add_index "pomodoro_tasks", ["pomodoro_id"], :name => "index_pomodoro_tasks_on_pomodoro_id"
+  add_index "pomodoro_tasks", ["task_id"], :name => "index_pomodoro_tasks_on_task_id"
+
+  create_table "pomodoros", :force => true do |t|
+    t.string   "state",      :default => "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "steps", :force => true do |t|
     t.string   "name"
