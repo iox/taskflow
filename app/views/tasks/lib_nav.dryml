@@ -34,7 +34,7 @@
 
 
 <def tag="options-menu">
-  <div id="pasos-pendientes" class="pull-right">
+  <div id="pasos-pendientes" class="">
     <a id="send-tracks-link" title="Send pending steps to Tracks" href="#">
       <span class="badge">2</span>
     </a>

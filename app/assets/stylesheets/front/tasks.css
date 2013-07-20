@@ -86,3 +86,9 @@ input.step-completed{
   float: left;
   margin-top: 19px;
 }
+
+
+
+.navbar .nav {
+  float: none !important;
+}
