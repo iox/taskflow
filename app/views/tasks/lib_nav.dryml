@@ -47,6 +47,7 @@
     </a>
   </div>
   <div class="pull-right" id="info-pomodoro">
-   <a class="btn" href="/pomodoros">Pomodoro: <%= @minutos_pomodoro %>'</a>
+    <a class="btn" href="/tracks">Tracks</a>
+    <a class="btn" href="/pomodoros">Pomodoro: <%= @minutos_pomodoro %>'</a>
   </div>
 </def>

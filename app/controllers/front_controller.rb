@@ -17,5 +17,24 @@ class FrontController < ApplicationController
       site_search(params[:query])
     end
   end
+  
+  def tracks
+    @tareas = []
+    @pings = []
+    Todo.find(:all, :from => "/todos.xml?due=0").map{|t|
+      if t.tags && (t.tags.include?('ibon') || t.tags.include?('imanol'))
+      elsif t.tags && t.tags.include?('starred')
+        @pings << t
+      else
+        @tareas << t
+      end
+    }
+  end
+  
+  def new_task_from_tracks
+    todo = Todo.find(params[:id])
+    @task = Task.create(:description => todo.description, :notes => todo.notes)
+    redirect_to @task
+  end
 
 end

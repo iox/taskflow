@@ -1,0 +1,16 @@
+<page>
+  <content:>
+    <h3><%= @tareas.size %> tareas</h3>
+    <tarea repeat="&@tareas"/>
+    <h3><%= @pings.size %> pings</h3>
+    <tarea repeat="&@pings"/>
+  </content:>
+</page>
+
+
+<def tag="tarea">
+  <div class="well">
+    <a href="/tracks/#{this.id}"><this.description/></a><br/>
+    <this.project-id/> <this.tags/>
+  </div>
+</def>

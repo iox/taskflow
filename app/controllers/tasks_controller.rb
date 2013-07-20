@@ -6,8 +6,8 @@ class TasksController < ApplicationController
   
   def show
     if pomodoro = Pomodoro.state_is('active').last
-      @minutos_pomodoro = ((Time.now - pomodoro.created_at) / 60).round
-      if @minutos_pomodoro > 25
+      @minutos_pomodoro = 25 - ((Time.now - pomodoro.created_at) / 60).round
+      if @minutos_pomodoro < 1
         pomodoro.update_attribute(:state, 'completed')
       end
     end

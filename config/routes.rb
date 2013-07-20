@@ -5,6 +5,9 @@ Taskflow2::Application.routes.draw do
 
   match 'search' => 'front#search', :as => 'site_search'
   
+  match 'tracks' => 'front#tracks'
+  match 'tracks/:id' => 'front#new_task_from_tracks'
+  
   match 'steps/move/:id/:direction' => 'steps#move'
 
   # The priority is based upon order of creation:
