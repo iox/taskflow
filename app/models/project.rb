@@ -1,4 +1,4 @@
-class Todo < ActiveResource::Base
+class Project < ActiveResource::Base
 
   self.site = URLTRACKS
   self.format = :xml

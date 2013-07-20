@@ -29,6 +29,7 @@ class FrontController < ApplicationController
         @tareas << t
       end
     }
+    @tareas = @tareas.group_by{|t| t.project_id}
   end
   
   def new_task_from_tracks

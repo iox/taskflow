@@ -19,6 +19,7 @@
       <input: class="clean h3" autocomplete="off"/>
     </live-editor-innards>
   </div>
+  <div class="well" style="height: 100px; overflow:auto" if="&@task.notes"><%= simple_format(@task.notes) %></div>
 </def>
 
 <def tag="breadcrumb">

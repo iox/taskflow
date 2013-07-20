@@ -1,7 +1,17 @@
 <page>
   <content:>
-    <h3><%= @tareas.size %> tareas</h3>
-    <tarea repeat="&@tareas"/>
+    <repeat with="&@tareas">
+      <div class="well">
+        <h5><%= Project.find(this.first.project_id).name %></h5>
+        <ul>
+          <li repeat="&this">
+            <a href="/tracks/#{this.id}"><this.description/></a>
+            <i><this.tags/></i>
+          </li>
+        </ul>
+      </div>
+    </repeat>
+
     <h3><%= @pings.size %> pings</h3>
     <tarea repeat="&@pings"/>
   </content:>
@@ -11,6 +21,5 @@
 <def tag="tarea">
   <div class="well">
     <a href="/tracks/#{this.id}"><this.description/></a><br/>
-    <this.project-id/> <this.tags/>
   </div>
 </def>
