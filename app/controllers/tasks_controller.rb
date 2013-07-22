@@ -5,6 +5,10 @@ class TasksController < ApplicationController
   auto_actions :all
   
   def show
+    # Compelte the Task before the pomodoro checks
+    if params[:completed]
+      Task.find(params[:id]).update_attribute(:state, 'completed')
+    end
     if pomodoro = Pomodoro.state_is('active').last
       @minutos_pomodoro = 25 - ((Time.now - pomodoro.created_at) / 60).round
       if @minutos_pomodoro < 1
@@ -14,9 +18,8 @@ class TasksController < ApplicationController
     if Pomodoro.state_is('active').count > 0
       if params[:id] && Task.where(:id => params[:id]).count > 0
         @task = Task.find(params[:id])
-        # Complete a task
+        # If the task is completed, set the current task to another one
         if params[:completed]
-          @task.update_attribute(:state, 'completed')
           @task = Task.where(:state => 'active').first
         end
       else

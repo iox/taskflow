@@ -21,5 +21,6 @@
 <def tag="tarea">
   <div class="well">
     <a href="/tracks/#{this.id}"><this.description/></a><br/>
+    <i><this.tags/></i>
   </div>
 </def>
